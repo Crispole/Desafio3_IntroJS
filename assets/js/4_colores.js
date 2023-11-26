@@ -36,6 +36,17 @@ cuadradoAmarillo.addEventListener('click', () => negro(cuadradoAmarillo));
 
 // Cambio de color cuadrado1
 
+function crearNuevoDiv(color){
+    const newDiv = document.createElement('div')
+    newDiv.style.width = '200px'
+    newDiv.style.height = '200px'
+    newDiv.style.border = '2px'
+    newDiv.style.borderStyle = 'solid'
+    newDiv.style.marginBottom = '20px'
+    newDiv.style.backgroundColor = color
+    document.body.appendChild(newDiv)
+}
+
 let colorkey1;
 const key = document.getElementById('cuadrado1')
 document.addEventListener('keydown', function (event) {
@@ -48,22 +59,15 @@ document.addEventListener('keydown', function (event) {
     else if (event.key === 'd') {
         colorkey1 = '#ffba6b';
     }
-    key.style.backgroundColor = colorkey1
-})
 
-// Cambio de color cuadrado2
-
-let colorkey2;
-const key1 = document.getElementById('cuadrado2')
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'q') {
-        colorkey2 = '#773d94';
+    else if (event.key === 'q') {
+        crearNuevoDiv('#773d94')
     }
     else if (event.key === 'w') {
-        colorkey2 = '#943d8a';
+        crearNuevoDiv('#943d8a')
     }
     else if (event.key === 'e') {
-        colorkey2 = '#c22760';
+        crearNuevoDiv('#c22760')
     }
-    key1.style.backgroundColor = colorkey2 // tenía "colorkey2" con otros caracteres extras, por eso no funcionaba
+    key.style.backgroundColor = colorkey1
 })
