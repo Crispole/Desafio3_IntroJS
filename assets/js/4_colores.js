@@ -5,25 +5,34 @@ const cuadradoRojo = document.querySelector('#rojo');
 const cuadradoVerde = document.querySelector('#verde');
 const cuadradoAmarillo = document.querySelector('#amarillo');
 
-function Azul() {
-    cuadradoAzul.style.backgroundColor ='#000';
-}
-cuadradoAzul.addEventListener('click',Azul);
+const negro = (elemento) => (elemento.style.backgroundColor= 'black');
 
-function Rojo() {
-    cuadradoRojo.style.backgroundColor ='#000';
-}
-cuadradoRojo.addEventListener('click',Rojo);
+//puse "elemento" aquí arriba pero sigo sin enteder por qué hacerlo
 
-function Verde() {
-    cuadradoVerde.style.backgroundColor ='#000';
-}
-cuadradoVerde.addEventListener('click',Verde);
+cuadradoAzul.addEventListener('click', () => negro(cuadradoAzul));
+cuadradoRojo.addEventListener('click', () => negro(cuadradoRojo));
+cuadradoVerde.addEventListener('click', () => negro(cuadradoVerde));
+cuadradoAmarillo.addEventListener('click', () => negro(cuadradoAmarillo));
 
-function Amarillo() {
-    cuadradoAmarillo.style.backgroundColor ='#000';
-}
-cuadradoAmarillo.addEventListener('click',Amarillo);
+// function Azul() {
+//     cuadradoAzul.style.backgroundColor ='#000';
+// }
+// cuadradoAzul.addEventListener('click',Azul);
+
+// function Rojo() {
+//     cuadradoRojo.style.backgroundColor ='#000';
+// }
+// cuadradoRojo.addEventListener('click',Rojo);
+
+// function Verde() {
+//     cuadradoVerde.style.backgroundColor ='#000';
+// }
+// cuadradoVerde.addEventListener('click',Verde);
+
+// function Amarillo() {
+//     cuadradoAmarillo.style.backgroundColor ='#000';
+// }
+// cuadradoAmarillo.addEventListener('click',Amarillo);
 
 // Cambio de color cuadrado1
 
@@ -56,5 +65,5 @@ document.addEventListener('keydown', function (event) {
     else if (event.key === 'e') {
         colorkey2 = '#c22760';
     }
-    key1.style.backgroundColor = colorkey2asd
+    key1.style.backgroundColor = colorkey2 // tenía "colorkey2" con otros caracteres extras, por eso no funcionaba
 })
